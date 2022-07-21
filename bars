@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+docker build -t sample-setup . && docker run --rm -it sample-setup
