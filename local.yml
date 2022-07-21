@@ -9,6 +9,18 @@
         - zsh
         - 1p
   tasks: 
-    - include_tasks: setup-tasks/zsh.yml
-    - include_tasks: setup-tasks/node.yml
-    - include_tasks: setup-tasks/1p.yml
+    - include_tasks:
+        file: setup-tasks/zsh.yml
+        apply:
+          tags:
+            - zsh
+    - include_tasks:
+        file: setup-tasks/node.yml
+        apply:
+          tags:
+            - node
+    - include_tasks:
+        file: setup-tasks/1p.yml
+        apply:
+          tags:
+            - 1p
